@@ -1,0 +1,52 @@
+package com;
+
+import java.util.Scanner;
+
+public class Main{
+    public static void printgrade (int score) {
+        if (score >= 90) {
+            System.out.println("Grade A+ ");
+        } else if (score >= 80) {
+            System.out.println("Grade A");
+        } else if (score >= 70) {
+            System.out.println("Grade B");
+
+        }
+    }
+public static void main(String [] args) {
+
+
+System.out.println("Calculating total percentage a student scored in class 12 examination");
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Physics score ");
+    int a = sc.nextInt();
+    printgrade (a);
+    System.out.println("Chemistry score");
+    int b = sc.nextInt();
+    printgrade(b);
+    System.out.println("Mathematics score ");
+    int c =sc.nextInt();
+    printgrade(c);
+    System.out.println("English score");
+    int d = sc.nextInt();
+    printgrade(d);
+    System.out.println("Physical Education score");
+    int e = sc.nextInt();
+    printgrade(e);
+    System.out.print("Total Score: ");
+    int totalscore = a+b+c+d+e;
+    System.out.println(totalscore);
+    System.out.print("Percentage: ");
+    double percentage = ((a+b+c+d+e)*100.0)/500;
+    System.out.println(percentage);
+    if (percentage>=90){
+        System.out.println("Grade A+");
+    }
+    else if (percentage>=80){
+        System.out.println("Grade A");
+    }
+    else if (percentage>=70){
+        System.out.println("Grade B");
+    }
+}
+}
